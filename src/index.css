@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: 248 250 252;
+  --color-box: 255 255 255;
+  --box-border: 226 232 240;
+  --box-sd: 203 213 225 / 0.5;
+  --color-heading-1: 15 23 42;
+  --color-heading-2: 30 41 59;
+  --color-heading-3: 51 65 85;
+}
+
+html.dark {
+  --color-bg: 2 6 23;
+  --color-box: 15 23 42;
+  --box-border: 30 41 59 / 0.5;
+  --box-sd: transparent;
+  --color-heading-1: 248 250 252;
+  --color-heading-2: 241 245 249;
+  --color-heading-3: 226 232 240;
+}
+
+@layer utilities {
+  .bg-body {
+    background-color: rgb(var(--color-bg));
+
+
+  }
+
+  .bg-box-bg {
+    background-color: rgb(var(--color-box));
+
+  }
+
+  .text-heading-1 {
+    color: rgb(var(--color-heading-1));
+  }
+
+  .text-heading-2 {
+    color: rgb(var(--color-heading-2));
+  }
+
+  .text-heading-3 {
+    color: rgb(var(--color-heading-3));
+  }
+}
+
+html {
+  scroll-behavior: smooth;  
+}
